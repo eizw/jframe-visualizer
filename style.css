@@ -5,14 +5,40 @@
     min-height: 50%;
     margin: 10px 10px 10px 0;
     display: grid;
-    grid-template-columns: 60% auto;
+    grid-template-rows: 70% auto;
 }
 
-.preview {
+
+.preview-container {
     background-color: white;
+    display: grid;
+    grid-template-rows: 75% auto;
 }
 
-.code {
+.screen-container {
+    display: flex;
+
+}
+
+.preview-screen {
+    width: 100%;
+    display: flex;
+    margin: 10px;
+    border: black solid;
+}
+
+.preview-buttons {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 15px;
+}
+
+.preview-btn {
+    border: black solid;
+    text-align: center;
+}
+
+.code-container {
     background-color: #bfbfbf;
 }
 
