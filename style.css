@@ -38,6 +38,33 @@
     text-align: center;
 }
 
+#selected {
+    background-color: red;
+}
+
+.layout {
+    margin: 10px;
+    width: 100%;
+    border: black solid;
+    background-color: gray;
+}
+
+.border-lay {
+    
+}
+.box-lay {
+
+}
+.card-lay {
+
+}
+.flow-lay {
+
+}
+.grid-lay {
+    
+}
+
 .code-container {
     background-color: #bfbfbf;
 }
