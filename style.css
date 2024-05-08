@@ -23,7 +23,7 @@
 .preview-screen {
     width: 100%;
     display: flex;
-    margin: 10px;
+    margin: 5px;
     border: black solid;
 }
 
@@ -43,27 +43,20 @@
 }
 
 .layout {
-    margin: 10px;
+    margin: 5px;
     width: 100%;
     border: black solid;
     background-color: gray;
+    display: flex;
 }
 
 .border-lay {
-    
+    display: grid;
+    grid-template-columns: ;
 }
-.box-lay {
-
-}
-.card-lay {
-
-}
-.flow-lay {
-
-}
-.grid-lay {
-    
-}
+.box-lay {}
+.flow-lay {}
+.grid-lay {}
 
 .code-container {
     background-color: #bfbfbf;

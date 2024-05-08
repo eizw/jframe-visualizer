@@ -1,8 +1,9 @@
 $('.preview-btn').click(function(e){
     addLay($(this).html());
 })
+$('.preview-btn').prop('disabled', true)
 
-let currentBox = null;
+let $currentBox = null;
 
 init()
 
@@ -15,7 +16,9 @@ function init() {
 function selectBox(e) {
     e.stopPropagation();
     $(this).attr('id', 'selected')
+    if (!$currentBox) $('.preview-btn').prop('disabled', false)
     $('.layout').not(this).attr('id', '')
+    $currentBox = $(this)
 }
 
 function addLay(type) {
@@ -24,13 +27,11 @@ function addLay(type) {
         'border','box','flow','grid'
     ]
 
-    if (type == 'border') {
+    if (type=='grid') {
 
-    } else if (type == 'box') {
-
-    } else if (type == 'flow') {
-        
-    } else if (type == 'grid') {
-
+    } else {
+        if (confirm(`Add a ${type}?`)) {
+            $currentBox.append($(`<div class="layout ${type}-lay"></div>`).click(selectBox))
+        }
     }
 }
