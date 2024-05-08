@@ -2,30 +2,35 @@ $('.preview-btn').click(function(e){
     addLay($(this).html());
 })
 
-let CURRENT_LAYOUT;
+let currentBox = null;
 
 init()
 
 function init() {
     console.log('skibidi')
-    $('.preview-screen').click(function(e) {
-        e.stopPropagation();
-        $(this).attr('id', 'selected')
-        $('.layout').not(this).attr('id', '')
-    })
-    $('.preview-screen').append($('<div class="layout"></div>').click(function(e) {
-        e.stopPropagation();
-        $(this).attr('id', 'selected')
-        $('.layout').not(this).attr('id', '')
-    }))
+    $('.preview-screen').click(selectBox)
+    $('.preview-screen').append($('<div class="layout"></div>').click(selectBox))
+}
+
+function selectBox(e) {
+    e.stopPropagation();
+    $(this).attr('id', 'selected')
+    $('.layout').not(this).attr('id', '')
 }
 
 function addLay(type) {
     type = type.substring(0, type.indexOf('L')).toLowerCase()
+    types = [
+        'border','box','flow','grid'
+    ]
 
-    if (type == 'grid') {
+    if (type == 'border') {
 
-    } else if (type == '') {
+    } else if (type == 'box') {
+
+    } else if (type == 'flow') {
+        
+    } else if (type == 'grid') {
 
     }
 }
