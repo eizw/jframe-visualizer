@@ -12,25 +12,39 @@
 .preview-container {
     background-color: white;
     display: grid;
-    grid-template-rows: 75% auto;
+    grid-template-rows: 75% auto 20%;
+}
+
+.edit-buttons {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+}
+
+.edit-btn {
+    background-color: #8c92ff;
+    text-align: center;
+}
+
+.del-btn {
+    background-color: #ff1768;
+    text-align: center;
 }
 
 .screen-container {
     display: flex;
-
 }
 
 .preview-screen {
     width: 100%;
     display: flex;
-    margin: 5px;
     border: black solid;
 }
 
 .preview-buttons {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    margin: 15px;
+    margin: 10px;
 }
 
 .preview-btn {
@@ -52,14 +66,13 @@
 
 .border-lay {
     display: grid;
-    grid-template-columns: ;
 }
 .box-lay {}
 .flow-lay {}
 .grid-lay {}
 
 .code-container {
-    background-color: #bfbfbf;
+    background-color: #303030;
 }
 
 
